@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -24,4 +24,29 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.heroSection {
+  background: url("https://picsum.photos/1000") no-repeat center center;
+  background-size: auto 20rem;
+}
+
+.btnAction {
+  border: 2px solid grey;
+  background-color: #78716c;
+  color: white;
+  min-width: 200px;
+  border-radius: 12px;
+  padding: 10px 0;
+  transition: all 0.2s;
+}
+.btnAction:hover {
+  background-color: #1f2937;
+  color: whitesmoke;
+}
+
+@media only screen and (max-device-width: 390px) {
+  .heroSection {
+    background-size: auto 16rem;
+  }
 }
